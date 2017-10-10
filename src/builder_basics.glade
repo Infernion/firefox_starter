@@ -98,7 +98,6 @@
   <object class="GtkWindow" id="main_window">
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Firefox launcher</property>
-    <property name="resizable">False</property>
     <property name="window_position">center</property>
     <property name="destroy_with_parent">True</property>
     <property name="icon_name">browser</property>
@@ -219,9 +218,10 @@
               </packing>
             </child>
             <child>
-              <object class="GtkTextView" id="profiles_textview">
+              <object class="GtkListBox" id="profiles_listbox">
                 <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="can_focus">False</property>
+                <property name="selection_mode">multiple</property>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -256,7 +256,7 @@
         </child>
       </object>
     </child>
-    <child>
+    <child type="titlebar">
       <placeholder/>
     </child>
   </object>

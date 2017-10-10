@@ -2,3 +2,4 @@
 /target/
 **/*.rs.bk
 *.glade~
+firefox_profiles/
