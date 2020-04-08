@@ -78,7 +78,7 @@ impl FirefoxProfile {
         }
     }
     fn get_profile_name_as_label(&self) -> gtk::Label {
-        gtk::Label::new(&*self.profile_name)
+        gtk::Label::new(Some(&*self.profile_name))
     }
 
     pub fn open(&self, url: &str) {
@@ -202,7 +202,7 @@ impl UI {
         {
 
             let ff_dir_description = gtk::Label::new(&*format!(
-                "Firefox profiles dir path:\n {:?}", &firefox_profiles_path2));
+                "Firefox profiles dir path:\n {:?}", Some(&firefox_profiles_path2)));
             let header_row = gtk::ListBoxRow::new();
             header_row.add(&ff_dir_description);
             header_row.set_selectable(false);
